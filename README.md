@@ -1,6 +1,6 @@
 # Project 10
 
-Calculation game based on the homework should be implemented. All of the tools used during the semester should be used. All the outlook is given with sass along with an appropriate HTML file. It is allowed to change what is given.
+Calculation game based on the homework 7 should be implemented. All of the tools used during the semester should be used. All the outlook is given with sass along with an appropriate HTML file. It is allowed to change what is given.
 
 Functionality example is given in `demo.mp4`.
 
