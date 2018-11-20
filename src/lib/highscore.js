@@ -12,7 +12,7 @@
  * @returns {number} Stig fyrir svör
  */
 export function score(total, correct, time) {
-  // todo útfæra
+  return Math.round(((correct / total) * (correct / total) + correct) * total / time) * 100;
 }
 
 /**
