@@ -30,14 +30,13 @@ export default class Highscore {
    * Hlaða stigatöflu inn
    */
   load() {
-    // todo útfæra
+    // this.highscore(load());
   }
 
   /**
    * Hreinsa allar færslur úr stigatöflu, tengt við takka .highscore__button
    */
   clear() {
-    // todo útfæra
   }
 
   /**
@@ -46,6 +45,5 @@ export default class Highscore {
    * @param {array} data Fylki af færslum í stigatöflu
    */
   highscore(data) {
-    // todo útfæra
   }
 }

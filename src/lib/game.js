@@ -2,7 +2,7 @@
 
 import question from './question';
 import { empty, el } from './helpers';
-import { score, Highscore } from './highscore';
+import Highscore, { score } from './highscore';
 
 // allar breytur hér eru aðeins sýnilegar innan þessa módúl
 
@@ -83,6 +83,10 @@ function start() {
   // todo útfæra
   total = 0;
   correct = 0;
+  empty(document.querySelector('.problem__question'));
+  empty(document.querySelector('.result__text'));
+  document.querySelector('.problem__input').value = '';
+  document.querySelector('.result__input').value = '';
   startButton.classList.add('button--hidden');
   problem.classList.remove('problem--hidden');
   setTimeout(tick(playTime), 1000);
@@ -110,7 +114,7 @@ function onSubmit(e) {
   document.querySelector('.problem__input').value = '';
 }
 
-result.addEventListener('submit', onSubmitScore); 
+result.addEventListener('submit', onSubmitScore);
 
 /**
  * Event handler fyrir þegar stig eru skráð eftir leik.
@@ -127,16 +131,16 @@ function onSubmitScore(e) {
   const name = document.querySelector('.result__input').value;
   const text = `${points} stig `;
   console.log(name);
-  // const ol = el('ol');
-  // const li = el('li');
-  // const span = el('span');
-  // span.appendChild(document.createTextNode(name));
-  // li.appendChild(document.createTextNode(text));
-  // li.appendChild(span);
-  // ol.appendChild(li);
-  // container.appendChild(ol);
-  // empty(p);
-  // console.log(ol);
+  const ol = el('ol');
+  const li = el('li');
+  const span = el('span');
+  span.appendChild(document.createTextNode(name));
+  li.appendChild(document.createTextNode(text));
+  li.appendChild(span);
+  ol.appendChild(li);
+  container.appendChild(ol);
+  empty(p);
+  console.log(ol);
   console.log(window.localStorage);
 
   result.classList.add('result--hidden');
